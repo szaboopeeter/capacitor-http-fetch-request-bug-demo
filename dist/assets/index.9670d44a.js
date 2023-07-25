@@ -552,7 +552,7 @@ registerPlugin("CapacitorHttp", {
   web: () => new CapacitorHttpPluginWeb()
 });
 const SplashScreen = registerPlugin("SplashScreen", {
-  web: () => __vitePreload(() => import("./web.ad6dcd3d.js"), true ? [] : void 0).then((m) => new m.SplashScreenWeb())
+  web: () => __vitePreload(() => import("./web.3409e693.js"), true ? [] : void 0).then((m) => new m.SplashScreenWeb())
 });
 var CameraSource;
 (function(CameraSource2) {
@@ -572,7 +572,7 @@ var CameraResultType;
   CameraResultType2["DataUrl"] = "dataUrl";
 })(CameraResultType || (CameraResultType = {}));
 const Camera = registerPlugin("Camera", {
-  web: () => __vitePreload(() => import("./web.d4036f84.js"), true ? [] : void 0).then((m) => new m.CameraWeb())
+  web: () => __vitePreload(() => import("./web.5bdeacf1.js"), true ? [] : void 0).then((m) => new m.CameraWeb())
 });
 window.customElements.define(
   "capacitor-welcome",
@@ -705,4 +705,11 @@ window.customElements.define(
     }
   }
 );
+window.onload = function() {
+  alert("window loaded");
+  const url = "https://www.google.com";
+  fetch(url).then(() => alert("fetched url string")).catch(() => alert("could not fetch url string"));
+  const request = new Request("https://www.bing.com");
+  fetch(request).then(() => alert("fetched Request()")).catch(() => alert("could not fetch Request()"));
+};
 export { CameraSource as C, WebPlugin as W, CameraDirection as a, CapacitorException as b };

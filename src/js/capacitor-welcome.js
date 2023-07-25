@@ -140,3 +140,10 @@ window.customElements.define(
     }
   }
 );
+
+window.onload = function () {
+  const url = 'https://www.google.com';
+  fetch(url).then(() => alert('fetched url string')).catch(() => alert('could not fetch url string'));
+  const request = new Request('https://www.bing.com');
+  fetch(request).then(() => alert('fetched Request()')).catch(() => alert('could not fetch Request()'));
+};
