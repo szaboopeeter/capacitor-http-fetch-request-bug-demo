@@ -1,3 +1,7 @@
+## Update
+
+The issue described below was fixed in capacitor 5.4.1 via https://github.com/ionic-team/capacitor/pull/6908
+
 ## Purpose
 
 The purpose of this application is to demonstrate a bug in CapacitorHttp plugin, whereas its patched `window.fetch()` falls back to the web implementation of `fetch()` whenever it is being called with a [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) object.
